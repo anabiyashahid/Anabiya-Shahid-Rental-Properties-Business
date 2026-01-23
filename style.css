@@ -1,109 +1,23 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Segoe UI, Arial, sans-serif;
-}
-
-body{
-  background:#f4f6f8;
-  color:#222;
-}
-
-/* NAVBAR */
-nav{
-  background:#ffffff;
-  padding:18px 50px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  box-shadow:0 2px 10px rgba(0,0,0,0.08);
-}
-
-nav h2{
-  color:#2563eb;
-}
-
-nav a{
-  margin-left:18px;
-  text-decoration:none;
-  color:#333;
-  font-weight:500;
-}
-
-nav a:hover{
-  color:#2563eb;
-}
-
-/* SECTIONS */
-section{
-  padding:60px 50px;
-}
-
-.hero{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  align-items:center;
-  gap:40px;
-}
-
-.hero h1{
-  font-size:38px;
-}
-
-.hero span{
-  color:#2563eb;
-}
-
-.hero p{
-  margin:20px 0;
-  color:#555;
-}
-
-/* BUTTON */
-.btn{
-  padding:12px 28px;
-  background:#2563eb;
-  color:#fff;
-  border:none;
-  border-radius:6px;
-  cursor:pointer;
-}
-
-.btn:hover{
-  background:#1e4fd1;
-}
-
-/* PROJECTS */
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:25px;
-  margin-top:30px;
-}
-
-.card{
-  background:#fff;
-  padding:25px;
-  border-radius:10px;
-  box-shadow:0 6px 18px rgba(0,0,0,0.08);
-}
-
-.card h3{
-  margin-bottom:10px;
-}
-
-.card p{
-  color:#555;
-  font-size:15px;
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:20px;
-  background:#ffffff;
-  margin-top:40px;
-  font-size:14px;
-  color:#555;
-}
+:root{--primary-color:#2563eb;--primary-dark:#1e40af;--primary-light:#3b82f6;--secondary-color:#f97316;--success-color:#10b981;--error-color:#ef4444;--text-dark:#1f2937;--text-light:#6b7280;--bg-light:#f9fafb;--bg-white:#ffffff;--border-color:#e5e7eb;--shadow-sm:0 1px 2px 0 rgba(0,0,0,0.05);--shadow-md:0 4px 6px -1px rgba(0,0,0,0.1);--shadow-lg:0 10px 15px -3px rgba(0,0,0,0.1);--shadow-xl:0 20px 25px -5px rgba(0,0,0,0.1);--radius-sm:6px;--radius-md:10px;--radius-lg:16px;--transition-fast:0.2s ease;--transition-normal:0.3s ease}*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif}body{background:linear-gradient(135deg,#f5f7fa 0%,#e8edf3 100%);color:var(--text-dark);line-height:1.6;min-height:100vh}body.form-page{display:flex;flex-direction:column;height:100vh;overflow:hidden}nav{background:var(--bg-white);padding:20px 50px;display:flex;justify-content:space-between;align-items:center;box-shadow:var(--shadow-md);position:sticky;top:0;z-index:1000;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--border-color)}nav h2{color:var(--primary-color);font-size:28px;font-weight:700;background:linear-gradient(135deg,var(--primary-color) 0%,var(--primary-light) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}nav div{display:flex;gap:8px;flex-wrap:wrap}nav a{text-decoration:none;color:var(--text-dark);font-weight:500;padding:8px 16px;border-radius:var(--radius-sm);transition:all var(--transition-fast);font-size:14px;position:relative}nav a:hover{color:var(--primary-color);background:rgba(37,99,235,0.08);transform:translateY(-1px)}nav a:active{transform:translateY(0)}section{padding:80px 50px;max-width:1400px;margin:0 auto;animation:fadeIn 0.6s ease-in}body.form-page section{padding:20px 50px;display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;overflow-y:auto}@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}section h1{font-size:48px;font-weight:800;margin-bottom:20px;color:var(--text-dark);line-height:1.2}section h2{font-size:36px;font-weight:700;margin-bottom:30px;color:var(--text-dark);position:relative;display:inline-block}body.form-page section h2{font-size:28px;margin-bottom:15px}section h2::after{content:"";position:absolute;bottom:-8px;left:0;width:60px;height:4px;background:linear-gradient(90deg,var(--primary-color),var(--secondary-color));border-radius:2px}section p{color:var(--text-light);font-size:16px;line-height:1.8}form{margin-top:20px;background:var(--bg-white);padding:35px 40px;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);border:1px solid var(--border-color);max-width:600px;width:100%}body.form-page form{margin-top:15px}input,textarea{border:2px solid var(--border-color);border-radius:var(--radius-md);font-size:15px;font-family:inherit;transition:all var(--transition-fast);background:var(--bg-light);color:var(--text-dark)}input:hover,textarea:hover{border-color:var(--primary-light)}input:focus,textarea:focus{outline:none;border-color:var(--primary-color);background:var(--bg-white);box-shadow:0 0 0 3px rgba(37,99,235,0.1);transform:translateY(-1px)}input::placeholder,textarea::placeholder{color:var(--text-light)}.form-input{width:100%;max-width:500px;padding:12px 16px;margin:10px 0;display:block}.form-input-wide{width:100%;max-width:500px;padding:12px 16px;margin:10px 0;display:block}.form-textarea{width:100%;max-width:500px;padding:12px 16px;height:100px;resize:vertical;margin:10px 0;display:block}.form-description{color:var(--text-light);font-size:14px;margin-bottom:15px;text-align:center}#messageBox{display:none;margin:0 0 20px 0;animation:slideDown 0.3s ease}@keyframes slideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}.success-message{background:linear-gradient(135deg,#d4edda 0%,#c3e6cb 100%);color:#155724;border:2px solid var(--success-color);padding:16px 24px;border-radius:var(--radius-md);margin:10px 0;font-weight:600;box-shadow:var(--shadow-sm)}.error-message{background:linear-gradient(135deg,#f8d7da 0%,#f5c6cb 100%);color:#721c24;border:2px solid var(--error-color);padding:16px 24px;border-radius:var(--radius-md);margin:10px 0;font-weight:600;box-shadow:var(--shadow-sm)}.hero-intro{max-width:650px;margin:25px 0;color:var(--text-light);font-size:18px;line-height:1.8}.hero-title-highlight{background:linear-gradient(135deg,var(--primary-color) 0%,var(--secondary-color) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:900}.property-image{width:100%;border-radius:var(--radius-md) var(--radius-md) 0 0;margin-bottom:0;object-fit:cover;height:200px;transition:transform var(--transition-normal)}.card:hover .property-image{transform:scale(1.05)}section p b{color:var(--primary-color);font-weight:600}
+.btn{padding:16px 40px;background:linear-gradient(135deg,#2563eb 0%,#3b82f6 50%,#2563eb 100%);background-size:200% auto;color:#fff;border:none;border-radius:50px;cursor:pointer;font-weight:700;font-size:17px;letter-spacing:0.5px;text-transform:uppercase;transition:all 0.4s ease;box-shadow:0 8px 25px rgba(37,99,235,0.4);position:relative;overflow:hidden;margin-top:15px}
+.btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent);transition:left 0.6s ease}
+.btn:hover{background-position:right center;transform:translateY(-3px) scale(1.02);box-shadow:0 12px 35px rgba(37,99,235,0.5)}
+.btn:hover::before{left:100%}
+.btn:active{transform:translateY(-1px) scale(0.98);box-shadow:0 5px 20px rgba(37,99,235,0.4)}
+.btn:focus{outline:none;box-shadow:0 0 0 4px rgba(37,99,235,0.3),0 8px 25px rgba(37,99,235,0.4)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:40px}
+.card{background:var(--bg-white);padding:0;border-radius:var(--radius-lg);box-shadow:var(--shadow-md);transition:all var(--transition-normal);overflow:hidden;border:1px solid var(--border-color);cursor:pointer}
+.card:hover{transform:translateY(-8px);box-shadow:var(--shadow-xl);border-color:var(--primary-color)}
+.card h3{margin:20px 20px 12px 20px;font-size:20px;color:var(--text-dark);font-weight:700}
+.card p{color:var(--text-light);font-size:14px;line-height:1.6;margin:0 20px 12px 20px}
+.card p:last-child{margin-bottom:20px}
+.card b{color:var(--primary-color);font-weight:600}
+footer{text-align:center;padding:30px 20px;background:var(--bg-white);margin-top:60px;font-size:14px;color:var(--text-light);border-top:1px solid var(--border-color);box-shadow:var(--shadow-sm)}
+body:has(.about-page) section{padding:40px 50px}
+body:has(.about-page) h1,body:has(.about-page) h2{margin-bottom:15px}
+body:has(.about-page) p{margin:12px 0}
+body:has(.about-page) ul{margin:12px 0 0 24px;color:var(--text-light)}
+body:has(.about-page) ul li{margin:8px 0;padding-left:8px}
+body:has(.about-page) ul li::marker{color:var(--primary-color)}
+@media (max-width:1024px){section{padding:60px 40px}section h1{font-size:40px}section h2{font-size:32px}}@media (max-width:768px){nav{flex-direction:column;padding:20px 25px;gap:15px}nav h2{font-size:24px}nav div{margin-top:0;justify-content:center}nav a{font-size:13px;padding:6px 12px}section{padding:50px 20px}section h1{font-size:32px}section h2{font-size:26px}.cards{grid-template-columns:1fr;gap:25px}form{padding:25px 15px}.form-input,.form-input-wide,.form-textarea{width:100%;max-width:100%}.btn{width:100%;padding:14px}body.form-page section{padding:15px 20px}body.form-page section h2{font-size:24px}}@media (max-width:480px){nav{padding:15px 20px}nav a{font-size:12px;padding:6px 10px}section{padding:40px 15px}section h1{font-size:28px}section h2{font-size:22px}form{padding:20px 15px}.property-image{height:180px}body.form-page section{padding:10px 15px}body.form-page section h2{font-size:22px}body.form-page form{padding:20px 15px}}
+@media (max-width:1024px){section{padding:60px 40px}section h1{font-size:40px}section h2{font-size:32px}}@media (max-width:768px){nav{flex-direction:column;padding:20px 25px;gap:15px}nav h2{font-size:24px}nav div{margin-top:0;justify-content:center}nav a{font-size:13px;padding:6px 12px}section{padding:50px 20px}section h1{font-size:32px}section h2{font-size:26px}.cards{grid-template-columns:1fr;gap:25px}form{padding:25px 15px}.form-input,.form-input-wide,.form-textarea{width:100%;max-width:100%}.btn{width:100%;padding:14px}body.form-page section{padding:15px 20px}body.form-page section h2{font-size:24px}}@media (max-width:480px){nav{padding:15px 20px}nav a{font-size:12px;padding:6px 10px}section{padding:40px 15px}section h1{font-size:28px}section h2{font-size:22px}form{padding:20px 15px}.property-image{height:180px}body.form-page section{padding:10px 15px}body.form-page section h2{font-size:22px}body.form-page form{padding:20px 15px}}

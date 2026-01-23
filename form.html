@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Property Inquiry Form</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -13,26 +15,32 @@
     <a href="about.html">About</a>
     <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
-    <a href="form.html">Form</a>
+    <a href="form.html">Inquiry Form</a>
+    <a href="student-registration.html">Student Registration</a>
+    <a href="teacher-registration.html">Teacher Registration</a>
   </div>
 </nav>
 
 <section>
   <h2>Property Inquiry</h2>
 
-  <p style="color:#555">Fill the form to inquire about rental properties.</p>
+  <p class="form-description">Fill the form to inquire about rental properties.</p>
+  <div id="messageBox"></div>
 
-  <input type="text" placeholder="Your Name" style="width:300px;padding:12px;margin:10px 0"><br>
-  <input type="email" placeholder="Your Email" style="width:300px;padding:12px;margin:10px 0"><br>
-  <input type="text" placeholder="Property Type (House / Apartment)" style="width:300px;padding:12px;margin:10px 0"><br>
-  <textarea placeholder="Message" style="width:300px;padding:12px;height:100px"></textarea><br><br>
-
-  <button class="btn">Submit Inquiry</button>
+  <form id="inquiryForm" action="process-inquiry.php" method="POST">
+    <input type="text" id="name" name="name" placeholder="Your Name" required class="form-input"><br>
+    <input type="email" id="email" name="email" placeholder="Your Email" required class="form-input"><br>
+    <input type="text" id="propertyType" name="propertyType" 
+           placeholder="Property Type (House / Apartment)" required class="form-input"><br>
+    <textarea id="message" name="message" placeholder="Message" required class="form-textarea"></textarea><br><br>
+    <button type="submit" class="btn">Submit Inquiry</button>
+  </form>
 </section>
 
 <footer>
   © 2026 Anabiya Shahid — Property Rental Portfolio
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Teacher Registration</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -13,37 +15,41 @@
     <a href="about.html">About</a>
     <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
-    <a href="form.html">Inquiry</a>
-    <a href="teacher-registration.html">Teacher</a>
-    <a href="student-registration.html">Student</a>
+    <a href="form.html">Inquiry Form</a>
+    <a href="student-registration.html">Student Registration</a>
+    <a href="teacher-registration.html">Teacher Registration</a>
   </div>
 </nav>
 
 <section>
   <h2>Teacher Registration</h2>
-  <p style="color:#555">
+  <p class="form-description">
     This form is for teachers to register for reviewing
     property rental semester projects.
   </p>
+  <div id="messageBox"></div>
 
-  <input type="text" placeholder="Teacher Full Name"
-         style="width:320px;padding:12px;margin:10px 0"><br>
+  <form id="teacherForm" action="process-teacher.php" method="POST">
+    <input type="text" id="teacherName" name="teacherName" 
+           placeholder="Teacher Full Name" required class="form-input-wide"><br>
 
-  <input type="email" placeholder="Email Address"
-         style="width:320px;padding:12px;margin:10px 0"><br>
+    <input type="email" id="teacherEmail" name="teacherEmail" 
+           placeholder="Email Address" required class="form-input-wide"><br>
 
-  <input type="text" placeholder="Department"
-         style="width:320px;padding:12px;margin:10px 0"><br>
+    <input type="text" id="department" name="department" 
+           placeholder="Department" required class="form-input-wide"><br>
 
-  <input type="text" placeholder="Subject"
-         style="width:320px;padding:12px;margin:10px 0"><br>
+    <input type="text" id="subject" name="subject" 
+           placeholder="Subject" required class="form-input-wide"><br>
 
-  <button class="btn">Register as Teacher</button>
+    <button type="submit" class="btn">Register as Teacher</button>
+  </form>
 </section>
 
 <footer>
   © 2026 Anabiya Shahid — Property Rental Portfolio
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
